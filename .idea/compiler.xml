@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common-server" />
+        <module name="details-server" />
+        <module name="eureka-server" />
+        <module name="file-uploand" />
+        <module name="item-interface" />
+        <module name="item-server" />
+        <module name="ly-cart" />
+        <module name="ly-payment" />
+        <module name="search-server" />
+        <module name="sms-server" />
+        <module name="user-server" />
+        <module name="zuul-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="auth-server" target="1.8" />
+      <module name="ly-sms" target="1.5" />
+      <module name="ly-user" target="1.5" />
+      <module name="rabbitmq-demo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auth-server" options="-parameters" />
+      <module name="common-server" options="-parameters" />
+      <module name="details-server" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="file-uploand" options="-parameters" />
+      <module name="item-interface" options="-parameters" />
+      <module name="item-server" options="-parameters" />
+      <module name="ly-cart" options="-parameters" />
+      <module name="ly-payment" options="-parameters" />
+      <module name="rabbitmq-demo" options="-parameters" />
+      <module name="search-server" options="-parameters" />
+      <module name="shop-parent" options="-parameters" />
+      <module name="sms-server" options="-parameters" />
+      <module name="user-server" options="-parameters" />
+      <module name="zuul-server" options="-parameters" />
+    </option>
+  </component>
+</project>

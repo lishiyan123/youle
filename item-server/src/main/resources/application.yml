@@ -1,0 +1,37 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: item-server
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/shixun?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 999123
+    driver-class-name: com.mysql.jdbc.Driver
+  rabbitmq:
+    host: 192.168.138.128
+    username: admin
+    password: admin
+    virtual-host: /anming
+    template:
+      retry:
+        enabled: true
+        initial-interval: 10000ms
+        max-interval: 300000ms
+        multiplier: 2
+      exchange: ly.item.exchange
+    publisher-confirms: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 5 # 每隔5秒发送一次心跳
+    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port}
+mybatis:
+  type-aliases-package: com.shop.bean
+  configuration:
+    map-underscore-to-camel-case: true  #字段实体属性映射驼峰转换
